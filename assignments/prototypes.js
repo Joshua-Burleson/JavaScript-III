@@ -157,8 +157,6 @@ Humanoid.prototype.greet = function(){
   Hero.prototype = Object.create(Humanoid.prototype);
   
 
-  // Hero.prototype.takeHit
-
   Hero.prototype.hit = function(giveOrTake, target, attackPoints){
     
     switch(giveOrTake === 'take'){
@@ -180,12 +178,11 @@ Humanoid.prototype.greet = function(){
   }
 
 
-
-
   const Villain = function(villainArgs){
     Hero.call(this, villainArgs);
     this.evilLaugh = villainArgs.evilLaugh;
   }
+  
 
   Villain.prototype = Object.create(Hero.prototype);
   Villain.prototype.laughInEvil = function(){
